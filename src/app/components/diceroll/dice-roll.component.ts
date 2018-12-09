@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {config} from "../../../../config";
 
 @Component({
     selector: 'dice-roll',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DiceRollComponent {
     
-    private rollDiceServiceUrl: string = "http://localhost:8080/diceroll"
+    private rollDiceServiceUrl: string = config.serverUrl + "/diceroll"
 
     public diceType: string = "d100";
     public diceCount: number = 1;
