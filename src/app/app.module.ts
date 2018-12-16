@@ -7,11 +7,13 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DiceRollComponent } from './components/diceroll/dice-roll.component';
+import { PerformTestComponent } from './components/performtest/perform-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiceRollComponent
+    DiceRollComponent,
+    PerformTestComponent
   ],
   imports: [
     BrowserModule,
