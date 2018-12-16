@@ -7,12 +7,12 @@
     <div class="form-group">
       <label for="diceType">Dice type</label>
       <select class="form-control-sm" id="diceType" [(ngModel)]="diceType" name="diceType">
-        <option>d4</option>
-        <option>d6</option>
-        <option>d8</option>
-        <option>d10</option>
-        <option>d20</option>
-        <option>d100</option>
+        <option value="4">d4</option>
+        <option value="6">d6</option>
+        <option value="8">d8</option>
+        <option value="10">d10</option>
+        <option value="20">d20</option>
+        <option value="100">d100</option>
       </select>
     </div>
     <button type="submit" class="btn btn-success">Roll</button>

@@ -11,15 +11,15 @@ export class DiceRollComponent {
     
     private rollDiceServiceUrl: string = config.serverUrl + "/diceroll"
 
-    public diceType: string = "d100";
+    public diceType: string = "100";
     public diceCount: number = 1;
     public result: object;
 
     constructor(private http: HttpClient) { }
 
     performRoll() {
-        let rollDiceString = this.diceCount + "x" + this.diceType
-        this.http.post(this.rollDiceServiceUrl, {rollRequest: rollDiceString})
+        let diceRollRequestBody = {"diceCount": this.diceCount, "diceFacesCount": this.diceType}
+        this.http.post(this.rollDiceServiceUrl, diceRollRequestBody)
             .subscribe(rollResult => this.result = rollResult);
     }
 }
